@@ -4,7 +4,27 @@
  *
  */
 
-// here the colors
+$white : #fff;
+$black : #000;
+$gray : #767676;
+$gray-light : #DCE3EB;
+$gray-dark : #222;
+$color-primary : #003B5C; 
+$color-primary-light : lighten($color-primary,.5);
+$color-primary-dark : darken($color-primary,.5);
+
+$color-secondary : #B12028;
+$color-secondary-light : lighten($color-secondary,.5);
+$color-secondary-dark : darken($color-secondary,.5);
+
+$color-tertiary : #63883b;
+$color-tertiary-light : lighten($color-tertiary,.5);
+$color-tertiary-dark : darken($color-tertiary,.5);
+
+$color-green: #789C48;
+$color-blue: #005CA9;
+$color-red: #B12028;
+$color-blue-light: #e9f2f1;
 
 /**
  * Breakpoint slicer
@@ -23,9 +43,7 @@ $slicer-breakpoints-settings: true;
  *
  * @see https://getbootstrap.com/docs/4.1/getting-started/theming/#variable-defaults
  */
-$font-size-base:1.4rem;
-$font-weight-base:300;
-$font-family-base: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 $btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 $border-radius:.4rem;
 $primary:blue;
