@@ -19,7 +19,7 @@
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
-				width: 311px;
+				width: 300px;
 			">
 							<div style="
 				height: 60px;
@@ -67,11 +67,18 @@
                     </svg>
                 </div>
                 <div style="margin:auto;">
-                    <p class="site-title m-0" style="
-    					font-size: 21px;
-					">PACIFIC CENTER for
+				<p class="site-title m-0" style="
+					font-size: 21px;
+					line-height: 21px;
+				">PACIFIC CENTER <span style="
+					font-style: italic;
+					font-size: 18px;
+				">for</span>
 					<br>
-					LIFELONG LEARNING</p>
+					<span style="
+						letter-spacing: -1px;
+					">LIFELONG LEARNING</span>
+				</p>
                 </div>
             </div></a><!-- .site-branding -->
 
