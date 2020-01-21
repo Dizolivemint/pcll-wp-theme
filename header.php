@@ -19,7 +19,7 @@
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
-				width: 300px;
+				width: 280px;
 			">
 							<div style="
 				height: 60px;
@@ -68,7 +68,7 @@
                 </div>
                 <div style="margin:auto;">
 				<p class="site-title m-0" style="
-					font-size: 21px;
+					font-size: 22px;
 					line-height: 21px;
 				">PACIFIC CENTER <span style="
 					font-style: italic;
