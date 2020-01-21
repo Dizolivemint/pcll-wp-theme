@@ -124,7 +124,7 @@
                 }
 
                 #navigation .navigation__list li {
-                    width: 16.6%;
+                    width: 15.9%;
                 }
 
                 .navigation__list ul {
