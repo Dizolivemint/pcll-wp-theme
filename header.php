@@ -108,4 +108,4 @@
             </script>
         </header><!-- #masthead -->
 
-        <div id="content" class="site-content">
+        <div id="content" class="site-content container p-0">
