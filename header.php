@@ -13,7 +13,7 @@
 		background: #003b5c;
 		color: #fff;
 	">
-        <header id="masthead" class="site-header" role="banner">
+        <header id="masthead" class="site-header container p-0" role="banner">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <div class="site-branding p-1" style="
 				display: flex;
