@@ -2,8 +2,19 @@ li.product {
     list-style: none;
     width: 48%;
     margin-top: 2rem;
+    padding: 1rem;
     &:nth-child(1) {
         margin-right: 4%;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    img {
+        width: 100%;
+        max-width: 460px;
     }
 }
 
