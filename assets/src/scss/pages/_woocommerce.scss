@@ -1,0 +1,13 @@
+li.product {
+    list-style: none;
+    width: 48%;
+    margin-top: 2rem;
+    &:nth-child(1) {
+        margin-right: 4%;
+    }
+}
+
+ul.products {
+    display: flex;
+    flex-wrap: wrap;
+}
