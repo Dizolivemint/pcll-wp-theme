@@ -1,5 +1,5 @@
 .justify-content-center-xs {
-    @include media-breakpoint-up(xs) {
+    @include media-breakpoint-down(sm) {
         -webkit-box-pack: center!important;
         -webkit-justify-content: center!important;
         -ms-flex-pack: center!important;
