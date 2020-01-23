@@ -1,26 +1,17 @@
 .justify-content-start-xs {
     @include media-breakpoint-down(sm) {
-        -webkit-box-pack: center!important;
-        -webkit-justify-content: center!important;
-        -ms-flex-pack: center!important;
-        justify-content: center!important;
+        justify-content: flex-start!important;
     }
 }
 
 .justify-content-end-xs {
     @include media-breakpoint-down(sm) {
-        -webkit-box-pack: center!important;
-        -webkit-justify-content: center!important;
-        -ms-flex-pack: center!important;
-        justify-content: center!important;
+        justify-content: flex-end!important;
     }
 }
 
 .justify-content-center-xs {
     @include media-breakpoint-down(sm) {
-        -webkit-box-pack: center!important;
-        -webkit-justify-content: center!important;
-        -ms-flex-pack: center!important;
         justify-content: center!important;
     }
 }
