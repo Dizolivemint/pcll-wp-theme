@@ -14,7 +14,7 @@
 		color: #fff;
 	">
         <header id="masthead" class="site-header container p-0" role="banner">
-            <div class="row mt-1 mb-1">
+            <div class="row mt-1 mb-1 mx-auto w-100">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="d-flex justify-content-center-xs col-md-6 col-sm-12">
                     <div class="site-branding d-flex flex-nowrap" style="
 						width: 280px;
