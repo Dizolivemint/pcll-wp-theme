@@ -90,7 +90,7 @@
 		}
 			?></a><?php
 	
-		$fragments['a.cart-contents'] = ob_get_clean();
+		$fragments['a.cart-contents.icon-shopping_cart'] = ob_get_clean();
 		
 		return $fragments;
 	}
