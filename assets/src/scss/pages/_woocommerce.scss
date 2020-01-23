@@ -23,20 +23,6 @@ ul.products {
     flex-wrap: wrap;
 }
 
-.cart-contents {
-    &:before {
-        font-size:28px;
-        margin-top:10px;
-        font-style:normal;
-        font-weight:400;
-        padding-right:5px;
-        vertical-align: bottom;
-    }
-    &:hover {
-        text-decoration: none;
-    }
-}
-
 .cart-contents-count {
     color: #fff;
     background-color: #2ecc71;
