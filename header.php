@@ -107,7 +107,7 @@
 
                 <ul class="navigation__list">
                     <li class="first"><a href="/joomdle/login">My Account</a></li>
-                    <li><a href="/shop">Course Library</a></li>
+                    <li><a href="library/shop">Course Library</a></li>
                     <!-- li class="parent"><a href="#">Pacific Symposium</a>
 			            <ul class="navigation__list navigation__drop hidden">
 			                <li><a href="https://www.pacificcollege.edu/symposium">Live in San Diego</a></li>
