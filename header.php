@@ -14,9 +14,9 @@
 		color: #fff;
 	">
         <header id="masthead" class="site-header container p-0" role="banner">
-            <div class="row">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <div class="site-branding p-1 d-flex justify-content-between flex-nowrap" style="
+            <div class="row mt-1 mb-1">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="d-flex justify-content-center-xs col-md-6 col-sm-12">
+                    <div class="site-branding d-flex flex-nowrap" style="
 						width: 280px;
 					">
                         <div style="
@@ -80,10 +80,10 @@
                         </div>
                     </div>
 				</a>
-				<div class="d-flex col-sm align-items-center justify-content-center mx-auto">
+				<div class="d-flex col-sm align-items-center justify-content-center justify-content-start-xs header__w-50-xs mx-auto">
 					Search
 				</div>
-				<div class="d-flex col-sm align-items-center justify-content-end justify-content-center-xs mx-auto">
+				<div class="d-flex col-sm align-items-center justify-content-end header__w-50-xs mx-auto">
 					Cart
 				</div>
             </div><!-- .site-branding -->
