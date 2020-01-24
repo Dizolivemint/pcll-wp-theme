@@ -38,7 +38,7 @@ ul.products {
     font-size: 32px;
 }
 
-woocommerce-store-notice {
+.woocommerce-store-notice {
     position: fixed;
     background-color: #8e2292;
     color: #fff;
@@ -49,7 +49,7 @@ woocommerce-store-notice {
 }
 
 
-woocommerce-store-notice__dismiss-link {
+.woocommerce-store-notice__dismiss-link {
     cursor: pointer;
     font-size: 14px;
     font-weight: 300;
