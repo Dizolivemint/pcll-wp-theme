@@ -81,7 +81,7 @@
                     </div>
 				</a>
 				<div class="d-flex col-sm align-items-center justify-content-center justify-content-start-xs header__w-50-xs mx-auto">
-					Search
+                <span class="search-trigger js-search-trigger"><i class="icon-search" aria-hidden="true"></i></span>
 				</div>
 				<div class="d-flex col-sm align-items-center justify-content-end header__w-50-xs mx-auto">
 				<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
