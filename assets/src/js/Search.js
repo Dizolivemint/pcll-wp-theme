@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+let href = window.location.href;
+let index = href.indexOf('/wp-admin');
+const rootUrl = href.substring(0, index);
+
 class Search {
   // 1. describe and create/initiate our object
   constructor() {
@@ -47,7 +51,7 @@ class Search {
   }
 
   getResults() {
-    $.getJSON(pcllData.root_url + '/wp-json/pcll/v1/search?term=' + this.searchField.val(), (results) => {
+    $.getJSON(rootUrl + '/wp-json/pcll/v1/search?term=' + this.searchField.val(), (results) => {
       this.resultsDiv.html(`
         <div class="row">
           <div class="one-third">
@@ -58,7 +62,7 @@ class Search {
           </div>
           <div class="one-third">
             <h2 class="search-overlay__section-title">Programs</h2>
-            ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${pcllData.root_url}/programs">View all programs</a></p>`}
+            ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${rootUrl}/programs">View all programs</a></p>`}
               ${results.programs.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
             ${results.programs.length ? '</ul>' : ''}
 
@@ -77,12 +81,12 @@ class Search {
           </div>
           <div class="one-third">
             <h2 class="search-overlay__section-title">Campuses</h2>
-            ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No campuses match that search. <a href="${pcllData.root_url}/campuses">View all campuses</a></p>`}
+            ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No campuses match that search. <a href="${rootUrl}/campuses">View all campuses</a></p>`}
               ${results.campuses.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
             ${results.campuses.length ? '</ul>' : ''}
 
             <h2 class="search-overlay__section-title">Events</h2>
-            ${results.events.length ? '' : `<p>No events match that search. <a href="${pcllData.root_url}/events">View all events</a></p>`}
+            ${results.events.length ? '' : `<p>No events match that search. <a href="${rootUrl}/events">View all events</a></p>`}
               ${results.events.map(item => `
                 <div class="event-summary">
                   <a class="event-summary__date t-center" href="${item.permalink}">
