@@ -23,3 +23,16 @@
         margin-top: 2rem;
     }
 }
+
+/* Container sizing */
+@include media-breakpoint-down(xl) {
+    .container {
+        width: 100%;
+    }
+}
+  
+@include media-breakpoint-down(xs) {
+    .container {
+        width: inherit;
+    }
+}
