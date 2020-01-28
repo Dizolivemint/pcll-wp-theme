@@ -5,6 +5,7 @@ li.product {
     margin-top: 2rem;
     padding: 1rem;
     justify-content: space-between;
+    flex-direction: column;
     &:nth-child(1) {
         margin-right: 4%;
     }
