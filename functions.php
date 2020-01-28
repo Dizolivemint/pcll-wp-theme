@@ -27,6 +27,10 @@
 		include( 'configure/admin.php' );
 	}
 
+	// REGISTER CUSTOM REST API
+
+	require get_theme_file_path('/inc/search-route.php');
+
 	// DEREGISTER SCRIPTS
 
 	add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
@@ -95,8 +99,6 @@
 		return $fragments;
 	}
 	add_filter( 'woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment' );
-
-	require get_theme_file_path('/inc/search-route.php');
 
 	function pcll_custom_rest() {
 	  register_rest_field('post', 'authorName', array(
