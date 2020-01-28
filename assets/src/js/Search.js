@@ -50,13 +50,13 @@ class Search {
     $.getJSON(pcllData.root_url + '/wp-json/pcll/v1/search?term=' + this.searchField.val(), (results) => {
       this.resultsDiv.html(`
         <div class="row">
-          <div class="one-third">
+          <div class="col-sm">
             <h2 class="search-overlay__section-title">General Information</h2>
             ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
               ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''}</li>`).join('')}
             ${results.generalInfo.length ? '</ul>' : ''}
           </div>
-          <div class="one-third">
+          <div class="col-sm">
             <h2 class="search-overlay__section-title">Podcasts</h2>
             ${results.podcasts.length ? '<ul class="link-list min-list">' : `<p>No podcasts match that search. <a href="${pcllData.root_url}/podcasts">View all podcasts</a></p>`}
               ${results.podcasts.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
@@ -75,7 +75,7 @@ class Search {
             ${results.instructors.length ? '</ul>' : ''}
 
           </div>
-          <div class="one-third">
+          <div class="col-sm">
             <h2 class="search-overlay__section-title">Events</h2>
             ${results.events.length ? '' : `<p>No events match that search. <a href="${pcllData.root_url}/events">View all events</a></p>`}
               ${results.events.map(item => `
