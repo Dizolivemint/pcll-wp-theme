@@ -33,13 +33,6 @@
     padding: 10px;
   }
   
-  @media (min-width: 530px) {
-  
-    .search-form .s {
-      font-size: 1.4rem;
-    }
-  }
-  
   .search-submit {
     color: #FFF;
     border: none;
@@ -94,15 +87,8 @@
   
   .search-overlay__icon {
     margin-right: 10px;
-    font-size: 1.8rem;
+    font-size: 3rem;
     color: #F95738;
-  }
-  
-  @media (min-width: 960px) {
-  
-    .search-overlay__icon {
-      font-size: 2.5rem;
-    }
   }
   
   .search-overlay--active {
@@ -125,27 +111,11 @@
     position: absolute;
     top: 13px;
     right: 16px;
-    font-size: 2.1rem;
+    font-size: 3rem;
     cursor: pointer;
     transition: all .3s;
     color: #F95738;
     line-height: .7;
-  }
-  
-  @media (min-width: 530px) {
-  
-    .search-overlay__close {
-      top: 18px;
-      font-size: 2.1rem;
-    }
-  }
-  
-  @media (min-width: 960px) {
-  
-    .search-overlay__close {
-      top: 26px;
-      font-size: 2.8rem;
-    }
   }
   
   .search-overlay__close:hover {
