@@ -30,4 +30,17 @@
         width: 100%;
         max-width: 100%;
     }
+
+    .site-content {
+        margin: 0 1rem 1rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    li.product {
+        width: 100%;
+        &:first-child {
+            margin-right: 0;
+        }
+    }
 }
