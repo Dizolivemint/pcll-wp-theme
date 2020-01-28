@@ -1,8 +1,10 @@
 li.product {
+    display: flex;
     list-style: none;
     width: 48%;
     margin-top: 2rem;
     padding: 1rem;
+    justify-content: space-between;
     &:nth-child(1) {
         margin-right: 4%;
     }
@@ -10,7 +12,8 @@ li.product {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+        flex-direction: column;
     }
     img {
         width: 100%;
