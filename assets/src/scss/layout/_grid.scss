@@ -25,14 +25,8 @@
 }
 
 /* Container sizing */
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-down(xl) {
     .container {
         width: 100%;
-    }
-}
-  
-@include media-breakpoint-down(lg) {
-    .container {
-        width: inherit;
     }
 }
