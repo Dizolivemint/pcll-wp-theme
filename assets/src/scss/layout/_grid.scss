@@ -25,8 +25,9 @@
 }
 
 /* Container sizing */
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(lg) {
     .container {
         width: 100%;
+        max-width: 100%;
     }
 }
