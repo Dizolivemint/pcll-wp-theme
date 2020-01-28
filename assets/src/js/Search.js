@@ -57,14 +57,14 @@ class Search {
             ${results.generalInfo.length ? '</ul>' : ''}
           </div>
           <div class="one-third">
-            <h2 class="search-overlay__section-title">Programs</h2>
-            ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${pcllData.root_url}/programs">View all programs</a></p>`}
-              ${results.programs.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
-            ${results.programs.length ? '</ul>' : ''}
+            <h2 class="search-overlay__section-title">Podcasts</h2>
+            ${results.podcasts.length ? '<ul class="link-list min-list">' : `<p>No podcasts match that search. <a href="${pcllData.root_url}/podcasts">View all podcasts</a></p>`}
+              ${results.podcasts.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+            ${results.podcasts.length ? '</ul>' : ''}
 
-            <h2 class="search-overlay__section-title">Professors</h2>
-            ${results.professors.length ? '<ul class="professor-cards">' : `<p>No professors match that search.</p>`}
-              ${results.professors.map(item => `
+            <h2 class="search-overlay__section-title">Instructors</h2>
+            ${results.instructors.length ? '<ul class="professor-cards">' : `<p>No instructors match that search.</p>`}
+              ${results.instructors.map(item => `
                 <li class="professor-card__list-item">
                   <a class="professor-card" href="${item.permalink}">
                     <img class="professor-card__image" src="${item.image}">
@@ -72,15 +72,10 @@ class Search {
                   </a>
                 </li>
               `).join('')}
-            ${results.professors.length ? '</ul>' : ''}
+            ${results.instructors.length ? '</ul>' : ''}
 
           </div>
           <div class="one-third">
-            <h2 class="search-overlay__section-title">Campuses</h2>
-            ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No campuses match that search. <a href="${pcllData.root_url}/campuses">View all campuses</a></p>`}
-              ${results.campuses.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
-            ${results.campuses.length ? '</ul>' : ''}
-
             <h2 class="search-overlay__section-title">Events</h2>
             ${results.events.length ? '' : `<p>No events match that search. <a href="${pcllData.root_url}/events">View all events</a></p>`}
               ${results.events.map(item => `
