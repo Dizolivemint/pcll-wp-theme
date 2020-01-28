@@ -1,10 +1,10 @@
 <?php
 	function _add_javascript()
 	{
+		wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/dist/js/main.js', array(), null, true );
 		wp_localize_script('main-js', 'pcllData', array(
 			'root_url' => get_site_url()
 		));
-		wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/dist/js/main.js', array(), null, true );
 	}
 
 	add_action('wp_enqueue_scripts', '_add_javascript', 100);
