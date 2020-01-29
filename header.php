@@ -80,14 +80,14 @@
                         </div>
                     </div>
 				</a>
-				<div class="d-flex col-sm align-items-center justify-content-center justify-content-start-xs header__w-50-xs mx-auto">
+				<div class="site-header__button d-flex col-sm align-items-center justify-content-center justify-content-start-xs header__w-50-xs mx-auto">
                 <span class="search-trigger js-search-trigger"><i class="icon-search" aria-hidden="true"></i></span>
 				</div>
 				<div class="d-flex col-sm align-items-center justify-content-end header__w-50-xs mx-auto">
 				<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
  
 					$count = WC()->cart->cart_contents_count;
-					?><a class="cart-contents icon-shopping_cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php 
+					?><a class="site-header__button cart-contents icon-shopping_cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php 
 					if ( $count > 0 ) {
 						?>
 							<span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
