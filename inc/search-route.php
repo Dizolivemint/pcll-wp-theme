@@ -39,7 +39,7 @@ function pcllSearchResults($data) {
       array_push($results['instructors'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
-        'image' => get_the_post_thumbnail_url(0, get_field('instructor_image'))
+        'image' => get_field('instructor_image')
       ));
     }
 
@@ -130,7 +130,7 @@ function pcllSearchResults($data) {
         array_push($results['instructors'], array(
           'title' => get_the_title(),
           'permalink' => get_the_permalink(),
-          'image' => get_the_post_thumbnail_url(0, get_field('instructor_image'))
+          'image' => get_field('instructor_image')
         ));
       }
 
