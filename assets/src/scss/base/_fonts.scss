@@ -44,6 +44,8 @@ $font-arial : Arial, sans-serif;
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    filter: drop-shadow( 1px 1px 1px #000 );
   }
   
   .icon-ipod:before {
