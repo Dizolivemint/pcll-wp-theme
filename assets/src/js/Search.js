@@ -63,12 +63,12 @@ class Search {
             ${results.podcasts.length ? '</ul>' : ''}
 
             <h2 class="search-overlay__section-title">Instructors</h2>
-            ${results.instructors.length ? '<ul class="professor-cards">' : `<p>No instructors match that search.</p>`}
+            ${results.instructors.length ? '<ul class="instructor-cards">' : `<p>No instructors match that search.</p>`}
               ${results.instructors.map(item => `
-                <li class="professor-card__list-item">
-                  <a class="professor-card" href="${item.permalink}">
-                    <img class="professor-card__image" src="${item.image}">
-                    <span class="professor-card__name">${item.title}</span>
+                <li class="instructor-card__list-item">
+                  <a class="instructor-card" href="${item.permalink}">
+                    <img class="instructor-card__image" src="${item.image}">
+                    <span class="instructor-card__name">${item.title}</span>
                   </a>
                 </li>
               `).join('')}
