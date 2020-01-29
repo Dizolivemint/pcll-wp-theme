@@ -36,8 +36,8 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
-    li.product {
+@include media-breakpoint-down(xs) {
+    .woocommerc li.product {
         width: 100%;
         &:first-child {
             margin-right: 0;
