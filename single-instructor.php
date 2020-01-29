@@ -13,8 +13,7 @@
       <div class="row">
 
           <div class="col-sm">
-          <?php $instructorImage = the_field('instructor_image'); ?>
-            <img src="<?php $instructorImage ?>"/>
+            <img src="<?php the_field('instructor_image'); ?>"/>
           </div>
 
           <div class="col-sm">
