@@ -16,9 +16,16 @@ li.product {
         justify-content: space-evenly;
         flex-direction: column;
     }
+    a:first-child {
+        height: 100%;
+    }
     img {
         width: 100%;
         max-width: 460px;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-right: 0;
     }
 }
 
