@@ -55,6 +55,10 @@ section .woocommerce {
     margin-top: 1rem;
 }
 
+section .woocommerce:first-child {
+    margin: 1rem;
+}
+
 .woocommerce-store-notice {
     position: fixed;
     background-color: #8e2292;
@@ -77,5 +81,30 @@ section .woocommerce {
     float: right;
     &:active, &:hover {
         text-decoration: underline;
+    }
+}
+
+/* Cart page */
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    width: 10vw;
+    height: auto;
+}
+
+th.product-quantity, td.product-quantity, th.product-subtotal, td.product-subtotal  {
+    display: none;
+}
+
+a.remove.icon-cancel-circle {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.coupon, .cart-collaterals {
+    margin: 2rem 0;
+}
+
+@include media-breakpoint-down(xs) {
+    th.product-thumbnail, td.product-thumbnail {
+        display: none;
     }
 }
