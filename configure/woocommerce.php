@@ -1,4 +1,19 @@
 <?php
+
+function pcll_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'pcll_add_woocommerce_support' );
+
+/** Remove image sizing from WooCommerce */
+add_filter( 'post_thumbnail_html', 'remove_wc_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_wc_width_attribute', 10 );
+  
+function remove_wc_width_attribute( $html ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
+
 /**
 * Ensure cart contents update when products are added to the cart via AJAX
 */
