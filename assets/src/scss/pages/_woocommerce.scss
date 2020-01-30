@@ -25,7 +25,9 @@ li.product {
     }
     @include media-breakpoint-down(sm) {
         width: 100%;
-        margin-right: 0;
+        &:nth-child(1) {
+            margin-right: 0;
+        }
     }
 }
 
