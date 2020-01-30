@@ -48,7 +48,7 @@ ul.products {
 }
 
 .cart-contents:before {
-    font-size: 32px;
+    font-size: 150%;
 }
 
 section .woocommerce {
@@ -63,7 +63,7 @@ section .woocommerce:first-child {
     position: fixed;
     background-color: #8e2292;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 100%;
     width: 100%;
     padding: 1rem 1rem 0 1rem;
     text-align: center;
@@ -72,7 +72,7 @@ section .woocommerce:first-child {
 
 .woocommerce-store-notice__dismiss-link {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 80%;
     font-weight: 300;
     padding: 0px 3px;
     text-decoration: none;
@@ -95,7 +95,7 @@ th.product-quantity, td.product-quantity, th.product-subtotal, td.product-subtot
 }
 
 a.remove.icon-cancel-circle {
-    font-size: 1.5rem;
+    font-size: 100%;
     padding: 1rem;
 }
 
