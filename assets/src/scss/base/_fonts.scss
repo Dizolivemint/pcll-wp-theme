@@ -46,6 +46,7 @@ $font-arial : Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
 
     filter: drop-shadow( 1px 1px 1px #000 );
+    font-size: calc(30px + 30*(100vw - 320px)/3520);
   }
   
   .icon-ipod:before {

@@ -47,10 +47,6 @@ ul.products {
     vertical-align: top;
 }
 
-.cart-contents:before {
-    font-size: 150%;
-}
-
 section .woocommerce {
     margin-top: 1rem;
 }
@@ -84,14 +80,26 @@ section .woocommerce:first-child {
     }
 }
 
+/* Cart Link Icon */
+.cart-contents-count {
+    font-size: calc(12px + 16*(100vw - 320px)/3520);
+}
+
 /* Cart page */
 img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
-    width: 10vw;
+    width: 40vw;
     height: auto;
+    @include media-breakpoint-down(sm) {
+        width: 70vw;
+    }
 }
 
 th.product-quantity, td.product-quantity, th.product-subtotal, td.product-subtotal  {
     display: none;
+}
+
+td.product-remove {
+    padding-left: 0;
 }
 
 a.remove.icon-cancel-circle {
@@ -101,6 +109,23 @@ a.remove.icon-cancel-circle {
 
 .coupon, .cart-collaterals {
     margin: 2rem 0;
+}
+
+.coupon {
+    display: flex;
+    label {
+        margin: 0;
+        align-self: center;
+    }
+    .button, .input-text {
+        margin: 0 0 0 1rem;
+    }
+}
+
+.actions {
+    button[name="update_cart"] {
+        display: none;
+    }
 }
 
 @include media-breakpoint-down(xs) {
