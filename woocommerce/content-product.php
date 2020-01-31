@@ -62,7 +62,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	
 	if (get_field('cab_approved') == "1") {
 		$cab = 'Approved';
-	} else if ($cabCat < 1) {
+	} elseif ($cabCat < 1) {
 		$cab = null;
 	} else {
 		$cab = 'Pending'
