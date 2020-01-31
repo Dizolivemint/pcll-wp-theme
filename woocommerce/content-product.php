@@ -73,7 +73,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	/* Additional product information rendered */
 
 	echo ('<ul>');
-	echo ('<li>'get_field('number_of_ceus'), 'CEUs/PDAs');
+	echo ('<li>', get_field('number_of_ceus'), 'CEUs/PDAs');
 	echo (' (NCCAOM ', $nccaom);
 	if ($cab) {
 		echo ('and CAB ', $cab)
