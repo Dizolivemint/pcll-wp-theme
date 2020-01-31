@@ -65,7 +65,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	} elseif ($cabCat < 1) {
 		$cab = null;
 	} else {
-		$cab = 'Pending'
+		$cab = 'Pending';
 	}
 
 	$youtubeURL = get_field('youtube_preview');
