@@ -52,9 +52,9 @@ class Search {
         <div class="row">
           <div class="col-sm">
             <h2 class="search-overlay__section-title">Products</h2>
-            ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No products matches that search.</p>'}
-              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> }</li>`).join('')}
-            ${results.generalInfo.length ? '</ul>' : ''}
+            ${results.productInfo.length ? '<ul class="link-list min-list">' : '<p>No products matches that search.</p>'}
+              ${results.productInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> }</li>`).join('')}
+            ${results.productInfo.length ? '</ul>' : ''}
           </div>
           <div class="col-sm">
             <h2 class="search-overlay__section-title">Podcasts</h2>
