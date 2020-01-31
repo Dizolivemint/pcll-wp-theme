@@ -49,14 +49,45 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 	do_action( 'woocommerce_shop_loop_item_title' );
 
-	echo ('<div>');
-	echo (get_field('number_of_ceus'));
-	echo (get_field('cab_category'));
-	echo (get_field('handouts'));
-	echo (get_field('nccaom_approved'));
-	echo (get_field('cab_approved'));
-	echo (get_field('youtube_preview'));
-   	echo ('</div>');
+	/* Additional product information */
+
+	$cabCat = get_field('cab_category');
+	$handouts = get_field('handouts');
+
+	if (get_field('nccaom_approved') == "1") {
+		$nccaom = 'Approved';
+	} else {
+		$nccaom = 'Pending';
+	}
+	
+	if (get_field('cab_approved') == "1") {
+		$cab = 'Approved';
+	} else if ($cabCat < 1) {
+		$cab = null;
+	} else {
+		$cab = 'Pending'
+	}
+
+	$youtubeURL = get_field('youtube_preview');
+
+	/* Additional product information rendered */
+
+	echo ('<ul>');
+	echo ('<li>'get_field('number_of_ceus'), 'CEUs/PDAs');
+	echo (' (NCCAOM ', $nccaom);
+	if ($cab) {
+		echo ('and CAB ', $cab)
+	}
+	echo (')</li>')
+	
+	if ($cab) {
+		echo ('<li>', 'CAB Category ', $cabCat, '</li>');
+	}
+	
+	if ($handouts) {
+		echo ('<li>Handouts Included</li>')
+	}
+   	echo ('</ul>');
 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item_title.
