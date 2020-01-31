@@ -49,6 +49,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 	do_action( 'woocommerce_shop_loop_item_title' );
 
+	echo ('<div>');
+	echo (get_field('number_of_ceus'));
+	echo (get_field('cab_category'));
+	echo (get_field('handouts'));
+	echo (get_field('nccaom_approved'));
+	echo (get_field('cab_approved'));
+	echo (get_field('youtube_preview'));
+   	echo ('</div>');
+
 	/**
 	 * Hook: woocommerce_after_shop_loop_item_title.
 	 *
