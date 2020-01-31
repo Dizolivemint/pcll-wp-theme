@@ -51,9 +51,9 @@ class Search {
       this.resultsDiv.html(`
         <div class="row">
           <div class="col-sm">
-            <h2 class="search-overlay__section-title">General Information</h2>
-            ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
-              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''}</li>`).join('')}
+            <h2 class="search-overlay__section-title">Products</h2>
+            ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No products matches that search.</p>'}
+              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> }</li>`).join('')}
             ${results.generalInfo.length ? '</ul>' : ''}
           </div>
           <div class="col-sm">
