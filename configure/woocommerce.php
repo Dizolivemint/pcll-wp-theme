@@ -123,7 +123,7 @@ function my_pre_get_posts( $query ) {
 	// update meta query
     $query->set('meta_query', $meta_query);
     
-    return $query;
+    return $meta_query;
 }
 
 // add_filter( 'woocommerce_product_query_meta_query', 'show_only_products_with_specific_metakey', 10, 2 );
