@@ -99,10 +99,8 @@ function my_pre_get_posts( $query ) {
 	// - allows custom code / plugins to continue working
 	if( !$query->is_main_query() ) return;
 	
-	
 	// get meta query
 	$meta_query = $query->get('meta_query');
-
 	
 	// loop over filters
 	foreach( $GLOBALS['my_query_filters'] as $key => $name ) {
@@ -118,8 +116,7 @@ function my_pre_get_posts( $query ) {
 		// get the value for this filter
 		// eg: http://www.website.com/events?city=melbourne,sydney
 		$value = explode(',', $_GET[ $name ]);
-		
-		
+			
 		// append meta query
     	$meta_query[] = array(
             'key'		=> $name,
@@ -128,7 +125,6 @@ function my_pre_get_posts( $query ) {
         );
         
 	} 
-	
 	
 	// update meta query
     $query->set('meta_query', $meta_query);
@@ -233,5 +229,3 @@ function pcll_product_filter() {
     })(jQuery);
     </script>
 }
-<?php
-add_action( 'woocommerce_product_query', 'pcll_product_filter');
