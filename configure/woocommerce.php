@@ -150,6 +150,7 @@ function my_pre_get_posts( $query ) {
 // }
 
 function pcll_product_filter() {
+    ?>
     <div id="archive-filters">
     <?php foreach( $GLOBALS['my_query_filters'] as $key => $name ): 
         
