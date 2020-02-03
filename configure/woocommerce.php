@@ -167,7 +167,7 @@ function pcll_product_filter() {
         
         
         // create filter
-        ?>
+    ?>
         <div class="filter" data-filter="<?php echo $name; ?>">
             <?php create_field( $field ); ?>
         </div>
