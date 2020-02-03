@@ -78,12 +78,11 @@ add_action('woocommerce_shop_loop_item_title', 'pcll_add_product_info');
 
 // array of filters (field key => field name)
 $GLOBALS['my_query_filters'] = array( 
-	'field_1'	=> 'location', 
-    'field_2'	=> 'related_instructors',
-    'field_3'	=> 'topic_category',
-    'field_4'	=> 'nccaom_category'
+	'location'	=> 'Location', 
+    'related_instructors'	=> 'Related Instructors',
+    'topic_category'	=> 'Topic Category',
+    'nccaom_category'	=> 'NCCAOM Category'
 );
-
 
 // action
 add_action('woocommerce_product_query_meta_query', 'my_pre_get_posts', 10, 1);
