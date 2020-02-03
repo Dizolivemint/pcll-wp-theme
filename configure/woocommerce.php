@@ -94,11 +94,6 @@ function my_pre_get_posts( $query ) {
 	// bail early if is in admin
 	if( is_admin() ) return;
 	
-	
-	// bail early if not main query
-	// - allows custom code / plugins to continue working
-	if( !$query->is_main_query() ) return;
-	
 	// get meta query
 	$meta_query = $query->get('meta_query');
 	
