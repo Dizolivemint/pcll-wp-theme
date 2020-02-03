@@ -228,4 +228,6 @@ function pcll_product_filter() {
 
     })(jQuery);
     </script>
+    <?php
 }
+add_action( 'woocommerce_product_query', 'pcll_product_filter');
