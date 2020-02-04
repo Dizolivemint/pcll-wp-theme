@@ -38,6 +38,7 @@
 	add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 
 	function my_deregister_javascript() {
+		if (is_admin()) return;
 		wp_deregister_script( 'edwiserbridge' );
 		wp_deregister_script( 'edwiserbridgeui-block' );
 		wp_deregister_script( 'wdmdatatablejs' );
@@ -49,17 +50,6 @@
 		wp_deregister_script( 'wc-cart-fragments' );
 		wp_deregister_script( 'woocommerce' );
 		wp_deregister_script( 'woocommerce_integration' );
-		if (is_admin()) return;
-		wp_deregister_script( 'jquery' );
-		wp_deregister_script( 'jquery-core' );
-		wp_deregister_script( 'jquery-ui-button' );
-		wp_deregister_script( 'jquery-ui-core' );
-		wp_deregister_script( 'jquery-ui-dialog' );
-		wp_deregister_script( 'jquery-ui-draggable' );
-		wp_deregister_script( 'jquery-ui-mouse' );
-		wp_deregister_script( 'jquery-ui-position' );
-		wp_deregister_script( 'jquery-ui-resizable' );
-		wp_deregister_script( 'jquery-ui-widget' );
 	}
 
 	add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
