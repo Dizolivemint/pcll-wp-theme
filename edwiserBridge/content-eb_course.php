@@ -104,7 +104,7 @@ if (isset($is_eb_my_courses) && $is_eb_my_courses && isset($attr)) {
     $course_url = get_permalink();
 }
 ?>
-<article id="<?php echo 'post-'.get_the_ID(); ?>" <?php post_class('wdm-col-3-2-1 eb-course-col wdm-course-grid-wrap col-sm m-2'.$course_class); ?> title="<?php echo $h_title; ?>">
+<article id="<?php echo 'post-'.get_the_ID(); ?>" <?php post_class('wdm-col-3-2-1 eb-course-col wdm-course-grid-wrap col-sm m-2 '.$course_class); ?> title="<?php echo $h_title; ?>">
 <div class="eb-grid-container">
     <div class="wdm-course-grid">
         <a href="<?php echo esc_url($course_url); ?>" rel="bookmark" class="wdm-course-thumbnail">
