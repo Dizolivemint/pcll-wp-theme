@@ -1,4 +1,4 @@
-<div class="eb-user-profile row" >
+<div class="eb-user-profile row m-0" >
     <?php
     $ebShortcodeObj = \app\wisdmlabs\edwiserBridge\EbShortcodeUserAccount::getInstance();
     if (isset($_GET['eb_action']) && $_GET['eb_action'] === 'edit-profile') {
