@@ -198,7 +198,7 @@
 			                <li><a href="/joomdle/pacific-symposium/streaming">Live Online</a></li>
 			            </ul>
 			        </li -->
-                    <li><a href="/joomdle/course-access">My Courses</a></li>
+                    <li><a href="/library/eb-my-courses">My Courses</a></li>
                     <li><a href="/joomdle/support">Support</a></li>
                     <li class="navigation__list__last"><a
                             href="https://pacificcenterforlifelonglearning.com/library/podcast">Podcast</a></li>
