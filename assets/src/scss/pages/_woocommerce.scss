@@ -128,6 +128,19 @@ a.remove.icon-cancel-circle {
     }
 }
 
+li.woocommerce-MyAccount-navigation-link.is-active {
+    background: $color-secondary;
+}
+
+nav.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.woocommerce-MyAccount-navigation-link {
+    padding: .5rem 25%;
+}
+
 @include media-breakpoint-down(xs) {
     th.product-thumbnail, td.product-thumbnail {
         display: none;
