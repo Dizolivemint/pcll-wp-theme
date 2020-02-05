@@ -25,6 +25,10 @@ a:active {
     text-decoration: none;
 }
 
+p > a {
+    text-decoration: underline;
+}
+
 *, *:hover, *:focus {
     outline:0 !important;
 }
