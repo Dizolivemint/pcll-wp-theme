@@ -4,7 +4,6 @@
 
   while(have_posts()) {
     the_post();
-    pageBanner();
      ?>
     
 
@@ -23,7 +22,6 @@
 
       </div>
       <hr class="section-break">
-      <?php echo do_shortcode('[Sassy_Social_Share style="background-color:#000;"]') ?>
       
       <div class="row">
         <?php
@@ -58,7 +56,9 @@
 
         ?>
       </div>
+      <?php echo do_shortcode('[Sassy_Social_Share style="background-color:#000;"]') ?>
     </div>
+    
     
   <?php }
 
