@@ -21,7 +21,6 @@
           </div>
 
       </div>
-      <hr class="section-break">
       
       <div class="row">
         <?php
@@ -30,7 +29,6 @@
 
           if ($relatedProducts) {
             echo '<div class="col-sm m-1">';
-            echo '<hr>';
             echo '<h2>Course(s)</h2>';
             echo '<ul>';
             foreach($relatedProducts as $product) { ?>
@@ -48,7 +46,6 @@
 
           if ($relatedPodcasts) {
             echo '<div class="col-sm m-1">';
-            echo '<hr>';
             echo '<h2>Podcast(s)</h2>';
             echo '<ul>';
             foreach($relatedPodcasts as $podcast) { ?>
