@@ -43,7 +43,7 @@
 		wp_deregister_script( 'edwiserbridgeui-block' );
 		wp_deregister_script( 'wdmdatatablejs' );
 		wp_deregister_script( 'Edwiser Bridge Single Sign On-public-script ' );
-		wp_deregister_script( 'heateor_sss_sharing_js' );
+		// wp_deregister_script( 'heateor_sss_sharing_js' );
 		wp_deregister_script( 'jquery-blockui' );
 		wp_deregister_script( 'js-cookie' );
 		wp_deregister_script( 'wc-add-to-cart' );
