@@ -9,13 +9,13 @@
 
     <div class="mt-2">
           
-      <div class="row">
+      <div class="row mb-1">
 
-          <div class="col-sm d-flex justify-content-center">
+          <div class="col-sm d-flex justify-content-center mb-1">
             <img style="width:300px; align-self: flex-start;" src="<?php the_field('instructor_image'); ?>"/>
           </div>
 
-          <div class="col-sm">
+          <div class="col-sm mr-1 ml-1">
             <?php the_content(); ?>
             
           </div>
@@ -29,7 +29,7 @@
           $relatedProducts = get_field('related_products');
 
           if ($relatedProducts) {
-            echo '<div class="col-sm">';
+            echo '<div class="col-sm m-1">';
             echo '<hr>';
             echo '<h2>Course(s)</h2>';
             echo '<ul>';
@@ -47,7 +47,7 @@
           $relatedPodcasts = get_field('related_podcasts');
 
           if ($relatedPodcasts) {
-            echo '<div class="col-sm">';
+            echo '<div class="col-sm m-1">';
             echo '<hr>';
             echo '<h2>Podcast(s)</h2>';
             echo '<ul>';
