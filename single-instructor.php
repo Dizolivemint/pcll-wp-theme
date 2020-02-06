@@ -29,13 +29,15 @@
           $relatedProducts = get_field('related_products');
 
           if ($relatedProducts) {
-            echo '<hr class="section-break">';
-            echo '<h2 class="headline headline--medium">Course(s)</h2>';
-            echo '<ul class="link-list min-list">';
+            echo '<div class="col-sm">';
+            echo '<hr>';
+            echo '<h2>Course(s)</h2>';
+            echo '<ul>';
             foreach($relatedProducts as $product) { ?>
               <li><a href="<?php echo get_the_permalink($product); ?>"><?php echo get_the_title($product); ?></a></li>
             <?php }
             echo '</ul>';
+            echo '</div>';
           }
 
         ?>
@@ -45,18 +47,19 @@
           $relatedPodcasts = get_field('related_podcasts');
 
           if ($relatedPodcasts) {
-            echo '<hr class="section-break">';
-            echo '<h2 class="headline headline--medium">Course(s)</h2>';
-            echo '<ul class="link-list min-list">';
+            echo '<div class="col-sm">';
+            echo '<hr>';
+            echo '<h2>Podcast(s)</h2>';
+            echo '<ul>';
             foreach($relatedPodcasts as $podcast) { ?>
               <li><a href="<?php echo get_the_permalink($podcast); ?>"><?php echo get_the_title($podcast); ?></a></li>
             <?php }
             echo '</ul>';
+            echo '</div>';
           }
 
         ?>
       </div>
-      <?php echo do_shortcode('[Sassy_Social_Share style="background-color:#000;"]') ?>
     </div>
     
     
