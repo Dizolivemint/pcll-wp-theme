@@ -11,8 +11,8 @@
           
       <div class="row">
 
-          <div class="col-sm">
-            <img src="<?php the_field('instructor_image'); ?>"/>
+          <div class="col-sm d-flex justify-content-center">
+            <img style="width:300px;" src="<?php the_field('instructor_image'); ?>"/>
           </div>
 
           <div class="col-sm">
