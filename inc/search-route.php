@@ -44,7 +44,7 @@ function pcllSearchResults($data) {
           ));
         }
       }
-      
+
       array_push($results['instructors'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
@@ -163,9 +163,6 @@ function pcllSearchResults($data) {
       }
 
     }
-    $results['instructors'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
-    $results['podcasts'] = array_values(array_unique($results['podcasts'], SORT_REGULAR));
-    $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
   }
 
   if ($results['instructors']) {
@@ -222,6 +219,7 @@ function pcllSearchResults($data) {
     $results['podcasts'] = array_values(array_unique($results['podcasts'], SORT_REGULAR));
     $results['products'] = array_values(array_unique($results['products'], SORT_REGULAR));
     $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
+    $results['instructors'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
   }
 
 
