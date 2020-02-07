@@ -3,7 +3,7 @@ var InfiniteScroll = require('infinite-scroll');
 $( document ).ready(function() {
     var infScroll = new InfiniteScroll( '.container', { 
         // options
-        path: '.next.page-numbers',
+        path: '.next',
         append: '.product',
         checkLastPage: true,
         responseType: 'document'
