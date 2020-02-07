@@ -147,3 +147,21 @@ li.woocommerce-MyAccount-navigation-link {
         display: none;
     }
 }
+
+/* Pagination */
+
+ul.page-numbers {
+    height: auto;
+    text-align: center;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+ul.page-numbers li {
+    display: inline;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+}

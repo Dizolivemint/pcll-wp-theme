@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     $('.container').infiniteScroll({
         // options
-        path: '.next',
+        path: '.next.page-numbers',
         append: '.product',
         checkLastPage: true,
         responseType: 'document'
