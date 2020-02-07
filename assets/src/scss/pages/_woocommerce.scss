@@ -177,6 +177,15 @@ ul.page-numbers li {
     margin: 1rem 0;
 }
 
-.woocommerce-Tabs-panel > h2 {
-    display: none;
+.woocommerce-Tabs-panel {
+    > p {
+        margin-top:1rem;
+    }
+    > h2 {
+        display: none;
+    }
+}
+
+li.nav-item.active {
+    border-color: $color-secondary;
 }
