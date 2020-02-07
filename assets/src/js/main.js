@@ -3,8 +3,10 @@ import 'jquery/dist/jquery.min';
 import 'bootstrap/dist/js/bootstrap.min';
 import General from './_generalScripts';
 import Search from './Search';
+import Infinitescroll from './Infinitescroll';
 
 let search = new Search();
+let infiniteScroll = new Infinitescroll();
 
 const App = {
 
