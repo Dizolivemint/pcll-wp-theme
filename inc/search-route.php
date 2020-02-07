@@ -26,7 +26,7 @@ function pcllSearchResults($data) {
   while($mainQuery->have_posts()) {
     $mainQuery->the_post();
 
-    if (get_post_type() == 'product') {
+    if (get_post_type() == 'post') {
       array_push($results['generalInfo'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
@@ -38,7 +38,7 @@ function pcllSearchResults($data) {
 
       if ($relatedProduct) {
         foreach($relatedProduct as $product) {
-          array_push($results['product'], array(
+          array_push($results['products'], array(
             'title' => get_the_title($product),
             'permalink' => get_the_permalink($product)
           ));
