@@ -151,7 +151,7 @@ function pcllSearchResults($data) {
 
     }
     $results['instructors'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
-    $results['podcasts'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
+    $results['podcasts'] = array_values(array_unique($results['podcasts'], SORT_REGULAR));
     $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
   }
 
@@ -206,8 +206,8 @@ function pcllSearchResults($data) {
         ));
       }
     }
-    $results['instructors'] = array_values(array_unique($results['podcasts'], SORT_REGULAR));
-    $results['podcasts'] = array_values(array_unique($results['products'], SORT_REGULAR));
+    $results['podcasts'] = array_values(array_unique($results['podcasts'], SORT_REGULAR));
+    $results['products'] = array_values(array_unique($results['products'], SORT_REGULAR));
     $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
   }
 
