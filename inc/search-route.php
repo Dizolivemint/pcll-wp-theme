@@ -18,7 +18,7 @@ function pcllSearchResults($data) {
   $results = array(
     'generalInfo' => array(),
     'instructors' => array(),
-    'products' => array(),
+    // 'products' => array(),
     'events' => array(),
     'podcasts' => array()
   );
@@ -53,7 +53,7 @@ function pcllSearchResults($data) {
         }
       }
     
-      array_push($results['products'], array(
+      array_push($results['generalInfo'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
         'id' => get_the_id()
@@ -87,10 +87,10 @@ function pcllSearchResults($data) {
     
   }
 
-  if ($results['products']) {
+  if ($results['generalInfo']) {
     $productsMetaQuery = array('relation' => 'OR');
 
-    foreach($results['products'] as $item) {
+    foreach($results['generalInfo'] as $item) {
       array_push($productsMetaQuery, array(
           'key' => 'related_products',
           'compare' => 'LIKE',
