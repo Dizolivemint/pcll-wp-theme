@@ -1,10 +1,10 @@
 <?php
 
 get_header();
-pageBanner(array(
-  'title' => 'All Events',
-  'subtitle' => 'Check out our upcomming events and live courses'
-));
+// pageBanner(array(
+//   'title' => 'All Events',
+//   'subtitle' => 'Check out our upcomming events and live courses'
+// ));
  ?>
 
 <div class="container">
