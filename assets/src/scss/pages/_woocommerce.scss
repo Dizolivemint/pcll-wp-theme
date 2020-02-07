@@ -21,6 +21,7 @@ li.product {
     }
     img {
         width: 100%;
+        height: auto;
         max-width: 460px;
     }
     @include media-breakpoint-down(sm) {
