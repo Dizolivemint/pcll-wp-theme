@@ -48,7 +48,8 @@ function pcllSearchResults($data) {
       array_push($results['instructors'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
-        'image' => get_field('instructor_image')
+        'image' => get_field('instructor_image'),
+        'id' => get_the_id()
       ));
     }
 
@@ -71,7 +72,8 @@ function pcllSearchResults($data) {
           array_push($results['instructors'], array(
             'title' => get_the_title($instructor),
             'permalink' => get_the_permalink($instructor),
-            'image' => get_field('instructor_image')
+            'image' => get_field('instructor_image'),
+            'id' => get_the_id()
           ));
         }
       }
@@ -110,60 +112,60 @@ function pcllSearchResults($data) {
     
   }
 
-  // if ($results['products']) {
-  //   $productsMetaQuery = array('relation' => 'OR');
+  if ($results['products']) {
+    $productsMetaQuery = array('relation' => 'OR');
 
-  //   foreach($results['products'] as $item) {
-  //     array_push($productsMetaQuery, array(
-  //         'key' => 'related_products',
-  //         'compare' => 'LIKE',
-  //         'value' => '"' . $item['id'] . '"'
-  //       ));
-  //   }
+    foreach($results['products'] as $item) {
+      array_push($productsMetaQuery, array(
+          'key' => 'related_products',
+          'compare' => 'LIKE',
+          'value' => '"' . $item['id'] . '"'
+        ));
+    }
 
-  //   $productRelationshipQuery = new WP_Query(array(
-  //     'post_type' => array('instructor', 'event', 'podcast'),
-  //     'meta_query' => $productsMetaQuery
-  //   ));
+    $productRelationshipQuery = new WP_Query(array(
+      'post_type' => array('instructor', 'event', 'podcast'),
+      'meta_query' => $productsMetaQuery
+    ));
 
-  //   while($productRelationshipQuery->have_posts()) {
-  //     $productRelationshipQuery->the_post();
+    while($productRelationshipQuery->have_posts()) {
+      $productRelationshipQuery->the_post();
 
-  //     if (get_post_type() == 'event') {
-  //       $eventDate = new DateTime(get_field('event_date'));
-  //       $description = null;
-  //       if (has_excerpt()) {
-  //         $description = get_the_excerpt();
-  //       } else {
-  //         $description = wp_trim_words(get_the_content(), 18);
-  //       }
+      if (get_post_type() == 'event') {
+        $eventDate = new DateTime(get_field('event_date'));
+        $description = null;
+        if (has_excerpt()) {
+          $description = get_the_excerpt();
+        } else {
+          $description = wp_trim_words(get_the_content(), 18);
+        }
 
-  //       array_push($results['events'], array(
-  //         'title' => get_the_title(),
-  //         'permalink' => get_the_permalink(),
-  //         'month' => $eventDate->format('M'),
-  //         'day' => $eventDate->format('d'),
-  //         'description' => $description
-  //       ));
-  //     }
+        array_push($results['events'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+          'month' => $eventDate->format('M'),
+          'day' => $eventDate->format('d'),
+          'description' => $description
+        ));
+      }
 
-  //     if (get_post_type() == 'instructor') {
-  //       array_push($results['instructors'], array(
-  //         'title' => get_the_title(),
-  //         'permalink' => get_the_permalink(),
-  //         'image' => get_field('instructor_image')
-  //       ));
-  //     }
+      if (get_post_type() == 'instructor') {
+        array_push($results['instructors'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+          'image' => get_field('instructor_image')
+        ));
+      }
 
-  //     if (get_post_type() == 'podcast') {
-  //       array_push($results['podcasts'], array(
-  //         'title' => get_the_title(),
-  //         'permalink' => get_the_permalink(),
-  //       ));
-  //     }
+      if (get_post_type() == 'podcast') {
+        array_push($results['podcasts'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+        ));
+      }
 
-  //   }
-  // }
+    }
+  }
 
   if ($results['instructors']) {
     $instructorsMetaQuery = array('relation' => 'OR');
