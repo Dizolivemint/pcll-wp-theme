@@ -209,4 +209,4 @@
             </script>
         </header><!-- #masthead -->
 
-        <div id="content" class="site-content container p-2 border">
+        <div id="content" class="site-content container mt-2 p-2 border">
