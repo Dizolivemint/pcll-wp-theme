@@ -1,7 +1,7 @@
-import 'infinite-scroll/dist/infinite-scroll.pkgd.min';
+var InfiniteScroll = require('infinite-scroll');
 
 $( document ).ready(function() {
-    $('.container').infiniteScroll({
+    var infScroll = new InfiniteScroll( '.container', { 
         // options
         path: '.next.page-numbers',
         append: '.product',
