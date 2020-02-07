@@ -7,7 +7,9 @@ $( document ).ready(function() {
         append: '.products',
         history: 'false',
         checkLastPage: true,
-        responseType: 'document'
+        responseType: 'document',
+        hideNav: '.woocommerce-pagination',
+        elementScroll: true
     });
 });
 
