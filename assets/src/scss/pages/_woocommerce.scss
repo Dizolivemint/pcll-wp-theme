@@ -6,7 +6,7 @@ li.product {
     padding: 1rem;
     justify-content: space-between;
     flex-direction: column;
-    &:nth-child(1) {
+    &:nth-child(odd) {
         margin-right: 4%;
     }
     a {
