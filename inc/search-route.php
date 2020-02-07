@@ -44,6 +44,7 @@ function pcllSearchResults($data) {
           ));
         }
       }
+      
       array_push($results['instructors'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
@@ -59,6 +60,18 @@ function pcllSearchResults($data) {
           array_push($results['podcasts'], array(
             'title' => get_the_title($podcast),
             'permalink' => get_the_permalink($podcast)
+          ));
+        }
+      }
+
+      $relatedInstructors = get_field('related_instructor');
+
+      if ($relatedInstructors) {
+        foreach($relatedInstructors as $instructor) {
+          array_push($results['instructors'], array(
+            'title' => get_the_title($instructor),
+            'permalink' => get_the_permalink($instructor),
+            'image' => get_field('instructor_image')
           ));
         }
       }
