@@ -109,7 +109,7 @@ function pcllSearchResults($data) {
     }
 
     $productRelationshipQuery = new WP_Query(array(
-      'post_type' => array('instructor', 'event', 'product'),
+      'post_type' => array('instructor', 'event', 'podcast'),
       'meta_query' => $productsMetaQuery
     ));
 
@@ -142,9 +142,72 @@ function pcllSearchResults($data) {
         ));
       }
 
+      if (get_post_type() == 'podcast') {
+        array_push($results['podcasts'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+        ));
+      }
+
+    }
+    $results['instructors'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
+    $results['podcasts'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
+    $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
+  }
+
+  if ($results['instructors']) {
+    $instructorsMetaQuery = array('relation' => 'OR');
+
+    foreach($results['instructors'] as $item) {
+      array_push($instructorsMetaQuery, array(
+          'key' => 'related_instructors',
+          'compare' => 'LIKE',
+          'value' => '"' . $item['id'] . '"'
+        ));
     }
 
+    $instructorRelationshipQuery = new WP_Query(array(
+      'post_type' => array('product', 'event', 'podcast'),
+      'meta_query' => $instructorsMetaQuery
+    ));
+
+    while($instructorRelationshipQuery->have_posts()) {
+      $instructorRelationshipQuery->the_post();
+
+      if (get_post_type() == 'event') {
+        $eventDate = new DateTime(get_field('event_date'));
+        $description = null;
+        if (has_excerpt()) {
+          $description = get_the_excerpt();
+        } else {
+          $description = wp_trim_words(get_the_content(), 18);
+        }
+
+        array_push($results['events'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+          'month' => $eventDate->format('M'),
+          'day' => $eventDate->format('d'),
+          'description' => $description
+        ));
+      }
+
+      if (get_post_type() == 'product') {
+        array_push($results['products'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+        ));
+      }
+
+      if (get_post_type() == 'podcast') {
+        array_push($results['podcasts'], array(
+          'title' => get_the_title(),
+          'permalink' => get_the_permalink(),
+        ));
+      }
+    }
     $results['instructors'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
+    $results['podcasts'] = array_values(array_unique($results['instructors'], SORT_REGULAR));
     $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
   }
 
